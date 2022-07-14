@@ -10,6 +10,7 @@
 body{
     width: 100%;
     min-height: 100vh;
+    background-color: rgb(66, 66, 66);
 }
 
 .container{
@@ -32,29 +33,49 @@ body{
 .container .header .title{
     width: 100%;
     text-align: center;
+    color: white;
 }
 
 .container .header span#btn-add{
-    border: 1px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
     padding: 3px 5px;
     border-radius: 4px;
     background-color: rgba(58, 211, 127, 0.678);
     cursor: pointer;
     transition: 0.5s;
+    color: white;
+    position: relative;
+}
+
+.container .header span::before{
+    content:"";
+    position: absolute;
+    top: 75%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(16, 255, 124, 0.678);
+
+    transform: perspective(4em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1.5em);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container .header span:hover::before{
+    opacity: 1;
 }
 
 .container .header span#btn-add:hover{
     background-color: rgba(16, 255, 124, 0.678);
-    box-shadow: 0 1px 15px rgba(20, 216, 108, 0.808);
-    border: 1px solid rgba(255,255,255,0.1);
-    color: rgba(0,0,0,0.5);
+    box-shadow: 1px 1px 5px rgba(20, 216, 108, 0.808);
 }
 
 .container .menu{
     display: flex;
     width: 95%;
     min-height: 85vh;
-    border: 1px solid rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.1);
     margin: 15px 0;
     border-radius: 4px;
 }
