@@ -10,33 +10,35 @@
 body{
     width: 100%;
     min-height: 100vh;
-    background-color: rgb(66, 66, 66);
+    background-color: rgba(66, 66, 66, 0.863);
 }
 
 .container{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
     min-height: 100vh;
+    margin: 0 auto;
     align-items: center;
 }
 
 .container .header{
     display: flex;
-    width: 95%;
+    width: 100%;
     margin-top: 15px;
-    justify-content: space-between;
     align-items: center;
-    
+    justify-items: center;
 }
 
-.container .header .title{
-    width: 100%;
-    text-align: center;
+.container .header h1{
+    display: inline-block;
+    margin: 0 auto;
     color: white;
 }
 
 .container .header span#btn-add{
+    display: inline-block;
+    position: absolute;
     border: 1px solid rgba(255,255,255,0.1);
     padding: 3px 5px;
     border-radius: 4px;
@@ -73,9 +75,58 @@ body{
 
 .container .menu{
     display: flex;
-    width: 95%;
+    width: 100%;
     min-height: 85vh;
-    border: 1px solid rgba(255,255,255,0.1);
-    margin: 15px 0;
-    border-radius: 4px;
+    margin: 15px auto;
+    padding: 20px 0;
+    justify-content: center;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.menu .task-menu{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px auto;
+    width: 100%;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.task{
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    border: 1px solid rgba(0,0,0,0.2);
+    width: 23%;
+    height: 370px;
+    margin: 10px;
+    background-color: rgba(112, 255, 177, 0.678);;
+}
+
+.task .task-header{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 10px;
+    gap: 10px;
+}
+
+.task .task-header i{
+    cursor: pointer;
+}
+
+.task .task-body{
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.task .task-body #text{
+    width: 100%;
+    resize: none;
+    outline: none;
+    padding: 10px;
 }

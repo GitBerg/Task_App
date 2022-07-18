@@ -4,22 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Notes App</title>
+    <script src="./index.js" defer></script>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <div class="title">
-                <h1>Notes App</h1>
-            </div>
+            <h1>Notes App</h1>
             <span id="btn-add">
                 Adcionar+
             </span>
         </div>
         <div class="menu">
-
-        </div>
+            <div class="task-menu">
+                <div class="task">
+                    <div class="task-header">
+                        <i class="fa-solid fa-pen-to-square" id="edit"></i>
+                        <i class="fa-solid fa-trash-can" id="thrash"></i>
+                    </div>
+                    <div class="task-body">
+                        <textarea name="text" id="text" cols="25" rows="15"></textarea>
+                    </div>
+                </div>
+            </div>
+            </div>
         <p>&copy Gutemberg S Filho</p>
     </div>
 </body>
