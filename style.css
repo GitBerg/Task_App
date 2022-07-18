@@ -33,6 +33,7 @@ body{
 .container .header h1{
     display: inline-block;
     margin: 0 auto;
+    transform: translateX(40px);
     color: white;
 }
 
@@ -47,6 +48,7 @@ body{
     transition: 0.5s;
     color: white;
     position: relative;
+    user-select: none;
 }
 
 .container .header span::before{
