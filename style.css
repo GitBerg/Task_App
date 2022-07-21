@@ -91,22 +91,22 @@ body{
 }
 
 .menu .task-menu{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); 
+    justify-content: space-around;
     width: 100%;
-    justify-content: center;
-    padding: 0 10px;
+    padding: 0 20px;
+    gap: 20px;
 }
 
 .task{
     display: flex;
     flex-direction: column;
     padding: 0 10px;
+    padding-bottom: 10px;
     border: 1px solid rgba(0,0,0,0.2);
-    width: 23%;
+    width: auto;
     height: 370px;
-    margin: 10px;
     background-color: rgba(112, 255, 177, 0.678);;
 }
 
@@ -115,6 +115,7 @@ body{
     justify-content: flex-end;
     padding: 5px 10px;
     gap: 10px;
+    color: rgb(255, 255, 255);
 }
 
 .task .task-header i{
@@ -124,11 +125,21 @@ body{
 .task .task-body{
     width: 100%;
     margin-bottom: 5px;
+    overflow: hidden;
 }
 
 .task .task-body #text{
     width: 100%;
+    height: 100%;
     resize: none;
     outline: none;
     padding: 10px;
+    font-size: 1rem;
+    
+}
+
+.task .task-body #text:disabled{
+    font-style: italic;
+    padding: 20px;
+    font-size: 1.2rem;
 }
