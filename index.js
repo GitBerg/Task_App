@@ -2,6 +2,10 @@ const menu = document.querySelector('.menu');
 const taskMenu = document.querySelector('.task-menu');
 const addTaskBtn = document.querySelector('#btn-add');
 
+new Sortable(taskMenu, {
+    animation: 350
+})
+
 const createTask = () => {
     const div1 = document.createElement('div');
     const div2 = document.createElement('div');
